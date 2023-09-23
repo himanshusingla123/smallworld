@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Himanshu World</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16" />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <div id="loadingscreen">
+      <div id="loader-wrapper">
+        <div class="title">Welcome to my world!</div>
+        <h1 style="text-align: right">
+          <span
+            >Me and my team are going to present on how our life revolves
+            around</span
+          >
+        </h1>
+        <div id="progress">
+          <span id="loading">Loading...</span>
+          <div id="progress-bar"></div>
+        </div>
+        <button
+          class="button cta"
+          id="start-button"
+          href="#start"
+          style="display: none"
+        >
+          Explore my world <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="logo">Himanshu<br />WORLD</div>
+
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <a href="index.html">
+            <li class="active">Small World</li>
+          </a>
+          <a href="about.html">
+            <li>About</li>
+          </a>
+          <a href="legal.html">
+            <li>Legal</li>
+          </a>
+          <a href="contact.html">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+
+    <label class="button-round" id="switch">
+      <input id="myCheckbox" type="checkbox" checked />
+      <i id="moon" class="icon fa fa-moon fa-xl"></i>
+      <i id="sun" class="icon fa fa-lightbulb fa-xl"></i>
+    </label>
+
+    <canvas class="webgl"></canvas>
+
+    <div class="sign" id="instructions">
+      <div id="animation"></div>
+      <div class="helptext"><span class="helptext">Drag to explore</span></div>
+    </div>
+
+    <div class="popup sign hidden">
+      <p2>My journey begins as a engineer studying Computer Science</p2>
+    </div>
+
+    <div class="popup project hidden">
+      <model-viewer
+        src="https://cwervo.com/assets/3D-models/logo.glb"
+        ios-src="https://cwervo.com/assets/3D-models/logo-3m-scaled.usdz"
+        ar="ar"
+        auto-rotate="auto-rotate"
+        camera-controls="camera-controls"
+        background-color="#2EAFAC"
+        quick-look-browsers="safari chrome"
+      ></model-viewer>
+    </div>
+
+    <div class="popup sign hidden">
+      <p2>After graduating, I started working as a AI/ML engineer.</p2>
+    </div>
+
+    <div class="popup sign hidden">
+      <p2>I moved to IIT Bhubaneswar for my Master studies.</p2>
+    </div>
+
+    <div class="popup project hidden">
+      <model-viewer
+        src="projects/super_meat_boy_free.glb"
+        ios-src="https://cwervo.com/assets/3D-models/logo-3m-scaled.usdz"
+        ar="ar"
+        auto-rotate="auto-rotate"
+        camera-controls="camera-controls"
+        background-color="#2EAFAC"
+        quick-look-browsers="safari chrome"
+      ></model-viewer>
+    </div>
+
+    <div class="popup sign hidden">
+      <p2>Thanks for visiting our website</p2>
+    </div>
+
+    <div class="popup project hidden">
+      <model-viewer
+        src="projects/tyrannosarus_rex_free_model.glb"
+        ios-src="https://cwervo.com/assets/3D-models/logo-3m-scaled.usdz"
+        ar="ar"
+        auto-rotate="auto-rotate"
+        camera-controls="camera-controls"
+        background-color="#2EAFAC"
+        quick-look-browsers="safari chrome"
+      ></model-viewer>
+    </div>
+
+    <div class="popup project hidden">
+      <model-viewer
+        src="projects/NeilArmstrong.glb"
+        ios-src="https://cwervo.com/assets/3D-models/logo-3m-scaled.usdz"
+        ar="ar"
+        auto-rotate="auto-rotate"
+        camera-controls="camera-controls"
+        background-color="#2EAFAC"
+        quick-look-browsers="safari chrome"
+      ></model-viewer>
+    </div>
+
+    <div class="popup sign hidden" id="contact">
+      <p2
+        >Want to connect?
+        <br />
+        Follow me on
+        <a href="" target="_blank" style="color: #5c30fd">Instagram</a>
+        <br />
+        or send me an <a onclick="copy()" style="color: #5c30fd">e-mail</a>
+        <br />
+      </p2>
+    </div>
+
+    <div class="modal" id="myModal1">
+      <div class="header">
+        <div class="header-wrapper">
+          <div class="title projectheadline"></div>
+        </div>
+        <div class="button-round close">
+          <i class="icon fa-solid fa-xmark fa-xl"></i>
+        </div>
+      </div>
+      <div class="modal-content-wrapper">
+        <h1 class="modal-subtitle"></h1>
+        <div class="embed-container">
+          <iframe
+            class="video"
+            src="https://player.vimeo.com/video/190451314?h=5b038d6e31"
+            width="640"
+            height="360"
+            frameborder="0"
+            fullscreen
+            picture-in-picture
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal2">
+      <div class="header">
+        <div class="header-wrapper">
+          <div class="title projectheadline"></div>
+        </div>
+        <div class="button-round close">
+          <i class="icon fa-solid fa-xmark fa-xl"></i>
+        </div>
+      </div>
+      <div class="modal-content-wrapper">
+        <h1 class="modal-subtitle"></h1>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal3">
+      <div class="header">
+        <div class="header-wrapper">
+          <div class="title projectheadline"></div>
+        </div>
+        <div class="button-round close">
+          <i class="icon fa-solid fa-xmark fa-xl"></i>
+        </div>
+      </div>
+      <div class="modal-content-wrapper">
+        <h1 class="modal-subtitle"></h1>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal4">
+      <div class="header">
+        <div class="header-wrapper">
+          <div class="title projectheadline"></div>
+        </div>
+        <div class="button-round close">
+          <i class="icon fa-solid fa-xmark fa-xl"></i>
+        </div>
+      </div>
+      <div class="modal-content-wrapper">
+        <h1 class="modal-subtitle"></h1>
+      </div>
+    </div>
+
+    <script src="js/buttons.js"></script>
+    <script type="module" src="js/sanity.js"></script>
+    <script type="module" src="js/3D.js"></script>
+  </body>
+</html>
