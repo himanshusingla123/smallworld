@@ -1,3 +1,3 @@
 # Small world
-## PPT Link
+## Site hosting Link
 - [Click Here](https://smallworldcreate.netlify.app/)
